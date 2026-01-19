@@ -2,7 +2,7 @@ from .base import *
 import dj_database_url
 
 DEBUG = False
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '192.168.0.161','www.coolina.in']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '192.168.0.161','www.coolnira.in']
 # WhiteNoise (recommended)
 MIDDLEWARE.insert(
     1,
