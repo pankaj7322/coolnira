@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block title %}Customer Dashboard | Coolnira{% endblock %}
+
+{% block content %}
+<section class="admin-dashboard">
+
+  <!-- HEADER -->
+  <div class="dashboard-header">
+    <h1>Customer Dashboard</h1>
+    <p>
+      Welcome, <strong>{{ request.user.username }}</strong><br>
+      <span class="dashboard-subtitle">Pure Water. Healthy Life.</span>
+    </p>
+  </div>
+
+  <!-- STATS / ACTION CARDS -->
+  <div class="stats-grid">
+
+    <div class="stat-card">
+      <div class="stat-icon">🛠️</div>
+      <div class="stat-info">
+        <h3>My Service Requests</h3>
+        <p>View & track</p>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon">📦</div>
+      <div class="stat-info">
+        <h3>My Products</h3>
+        <p>Installed units</p>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon">📄</div>
+      <div class="stat-info">
+        <h3>AMC Details</h3>
+        <p>Active plans</p>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon">📞</div>
+      <div class="stat-info">
+        <h3>Support</h3>
+        <p>24×7 Assistance</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- QUICK ACTIONS -->
+  <div class="quick-actions">
+    <h2>Quick Actions</h2>
+
+    <div class="action-grid">
+      <a href="#" class="action-card">➕ Raise Service Request</a>
+      <a href="#" class="action-card">📍 Update Address</a>
+      <a href="#" class="action-card">👤 Edit Profile</a>
+    </div>
+  </div>
+
+</section>
+{% endblock %}

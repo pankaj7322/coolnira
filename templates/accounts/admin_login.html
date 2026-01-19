@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Admin Login | Coolnira{% endblock %}
+
+{% block content %}
+<section class="auth-section">
+  <div class="auth-card">
+
+    <div class="auth-header">
+      <h2>Admin Login</h2>
+      <p>Coolnira Administration Panel</p>
+    </div>
+
+    {% for message in messages %}
+      <div class="auth-error">{{ message }}</div>
+    {% endfor %}
+
+    <form method="post" class="auth-form">
+      {% csrf_token %}
+
+      <div class="form-group">
+        <input type="text" name="username" required>
+        <label>Admin Username</label>
+      </div>
+
+      <div class="form-group">
+        <input type="password" name="password" required>
+        <label>Password</label>
+      </div>
+
+      <button type="submit" class="btn-auth">Login</button>
+    </form>
+
+  </div>
+</section>
+{% endblock %}

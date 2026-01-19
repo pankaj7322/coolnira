@@ -1,0 +1,46 @@
+<!-- TOP HEADER -->
+<div class="top-header">
+  <div class="container top-header-flex">
+    <div class="top-left">
+      <a href="https://facebook.com" target="_blank">Facebook</a>
+      <a href="https://twitter.com" target="_blank">Twitter</a>
+      <a href="https://instagram.com" target="_blank">Instagram</a>
+      <a href="https://linkedin.com" target="_black">linkedin</a>
+    </div>
+
+    <div class="top-right">
+    
+      <span>Call: +91 98765 43210</span>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN HEADER -->
+<header class="main-header">
+  <div class="container main-header-flex">
+    <div class="logo">Coolnira</div>
+
+    <nav class="main-nav">
+      <a href="/">Home</a>
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+      {% if user.is_authenticated %}
+        {% if user.is_superuser %}
+          <a href="{% url 'admin_dashboard' %}"> Dashboard</a>
+        {% endif %}
+        <a href="{% url 'admin_logout' %}" class="btn-login">Logout</a>
+      {% else %}
+      <div class="dropdown">
+        <button class="btn-login dropdown-btn">Login ▾</button>
+        <div class="dropdown-menu">
+          <a href="{% url 'admin_login' %}">Admin Login</a>
+          <a href="{% url 'customer_login' %}">Customer Login</a>
+        </div>
+      </div>
+   
+      {% endif %}
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block title %}Admin Dashboard | Coolnira{% endblock %}
+
+{% block content %}
+<section class="admin-dashboard">
+
+  <!-- DASHBOARD HEADER -->
+  <div class="dashboard-header">
+    <h1>Admin Dashboard</h1>
+    <p>Welcome back, <strong>{{ request.user.username }}</strong></p>
+  </div>
+
+  <!-- STATS CARDS -->
+  <div class="stats-grid">
+
+    <div class="stat-card">
+      <div class="stat-icon">👤</div>
+      <div class="stat-info">
+        <h3>Total Customers</h3>
+        <p>--</p>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon">🛒</div>
+      <div class="stat-info">
+        <h3>Total Buyers</h3>
+        <p>--</p>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon">🛠️</div>
+      <div class="stat-info">
+        <h3>Service Requests</h3>
+        <p>--</p>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon">📦</div>
+      <div class="stat-info">
+        <h3>Products</h3>
+        <p>--</p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+{% endblock %}
